@@ -52,12 +52,24 @@ class Sidebar extends PluginGeneric
     }
 
     /**
+     * Enqueue Builder Extension
+     */
+    private function initBuilderComponents()
+    {
+        add_action('admin_enqueue_scripts', function(){
+            wp_enqueue_script($this->getPrefix('builder-components'), plugin_dir_url(__DIR__) . '/assets/js/builder.js', ['jquery'], '1.0', true);
+        });
+    }
+
+    /**
      * Initialize Admin only resources
      * @return bool
      */
     private function initAdmin()
     {
         if (!is_admin()) return false;
+
+        $this->initBuilderComponents();
 
         add_action('save_post', function($id)
         {
