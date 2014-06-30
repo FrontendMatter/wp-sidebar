@@ -13,10 +13,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum?"
                     },
                     "options": {
-                        "id": "1",
                         "type": "shortcode",
                         "shortcode_id": "register_sidebar",
                         "shortcode_atts": ["id"],
+                        "data": {
+                            "id": "1"
+                        },
                         "form": [
                             {
                                 "name": "id",
@@ -33,10 +35,12 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsum?"
                     },
                     "options": {
-                        "id": "my-sidebar",
                         "type": "shortcode",
                         "shortcode_atts": ["id"],
                         "shortcode_id": "display_sidebar",
+                        "data": {
+                            "id": "my-sidebar"
+                        },
                         "form": [
                             {
                                 "name": "id",
